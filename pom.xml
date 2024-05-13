@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.com.api</groupId>
 	<artifactId>street-hub</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>street-hub</name>
 	<description>Projeto Faculdade</description>
 	<properties>
