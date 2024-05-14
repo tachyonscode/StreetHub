@@ -1,9 +1,13 @@
 package br.com.api.streethub.usuario;
 
+import java.io.Serializable;
+
+import br.com.api.streethub.reputacao.Reputacao;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,7 +22,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table
-public class Usuario {
+public class Usuario implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5749600936771522383L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

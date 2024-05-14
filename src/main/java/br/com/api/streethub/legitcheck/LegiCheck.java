@@ -1,6 +1,8 @@
 package br.com.api.streethub.legitcheck;
 
 
+import java.io.Serializable;
+
 import org.springframework.data.relational.core.mapping.Table;
 
 import jakarta.persistence.Entity;
@@ -20,9 +22,14 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table("legi_check")
-public class LegiCheck {
+public class LegiCheck implements Serializable {
 
-   @Id
+   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 4446965541930265849L;
+
+@Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idVerificacao;
 	

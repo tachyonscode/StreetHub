@@ -1,5 +1,6 @@
 package br.com.api.streethub.produto;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import jakarta.persistence.Entity;
@@ -21,8 +22,13 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table
-public class Produto {
+public class Produto implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 652334854864932969L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idProduto;

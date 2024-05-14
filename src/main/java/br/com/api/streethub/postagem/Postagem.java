@@ -1,5 +1,6 @@
 package br.com.api.streethub.postagem;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import jakarta.persistence.Entity;
@@ -20,8 +21,13 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table
-public class Postagem {
+public class Postagem implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8071226409456489858L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idPostagem;
